@@ -3,7 +3,7 @@ public class Main extends Throwable {
 
     private static String name;
 
-    public static void main(String[] args) {
+    public static int main(String[] args) {
 
         User user = new User();
         //user.setAge(20);
@@ -40,6 +40,13 @@ public class Main extends Throwable {
             } else {
                 System.out.println(name.length());
             }
+        }
+
+        public static int getUserAge (int x) {
+
+            if (x < 1 || x > 100) {
+                throw new IllegalAgeException("Возраст человека вне предела 1-100 лет");
+            } return x;
         }
     }
 }
